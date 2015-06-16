@@ -1,0 +1,61 @@
+{% extends "rajim/base2.html" %}
+{% block content %}
+
+<title>{% block title %}Contacto{% endblock %}</title>
+	<!-- end header -->
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<ul class="breadcrumb">
+					<li><a href="/"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+					<li class="active">Contacto</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</section>
+	<section id="content">
+	<div class="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6657.791846963416!2d-70.68294653436278!3d-33.452017960329435!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x570cc870711695a9!2sDepartamento+de+Ingenier%C3%ADa+Inform%C3%A1tica+USACH!5e0!3m2!1ses!2scl!4v1433117887287" width="600" height="450" frameborder="0" style="border:0"></iframe>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h4>Mantente en contacto con nosotros y <strong>reporta cualquier error que presencies en la pagina</strong></h4>
+				<form id="contactform" action="contact/contact.php" method="post" class="validateform" name="send-contact">
+					<div id="sendmessage">
+						 Tu mensaje ah sido enviado. Muchas gracias!
+					</div>
+					<div class="row">
+						<div class="col-lg-4 field">
+							<input type="text" name="name" placeholder="* Ingresa tu nombre completo" data-rule="maxlen:4" data-msg="Ingresa al menos 4 letras " />
+							<div class="validation">
+							</div>
+						</div>
+						<div class="col-lg-4 field">
+							<input type="text" name="email" placeholder="* Ingresa tu dirección email" data-rule="email" data-msg="Ingresa un mail valido" />
+							<div class="validation">
+							</div>
+						</div>
+						<div class="col-lg-4 field">
+							<input type="text" name="subject" placeholder="Ingresa el asunto" data-rule="maxlen:4" data-msg="Ingresa al menos 4 letras" />
+							<div class="validation">
+							</div>
+						</div>
+						<div class="col-lg-12 margintop10 field">
+							<textarea rows="12" name="message" class="input-block-level" placeholder="* Tu mensaje aqui..." data-rule="required" data-msg="Porfavor escribe algo.."></textarea>
+							<div class="validation">
+							</div>
+							<p>
+								<button class="btn btn-theme margintop10 pull-left" type="submit">Enviar mensaje</button>
+								<span class="pull-right margintop20">* Porfavor rellena todos los campos marcados, Gracias!</span>
+							</p>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</section>
+{% endblock content %}
